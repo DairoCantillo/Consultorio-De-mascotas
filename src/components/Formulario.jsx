@@ -71,7 +71,7 @@ const Formulario = ({ crearCita }) => {
           type="text"
           name="propietario"
           className="u-full-width"
-          placeholder="Nombre Dueno de la Mascota"
+          placeholder="Nombre del Dueño de la Mascota"
           onChange={actualizarState}
           value={propietario}
         />
