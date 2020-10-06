@@ -5,20 +5,14 @@ import Cita from "./components/Cita";
 const App = () => {
   //citas en local storage
   let citasIninciales = JSON.parse(localStorage.getItem("citas"));
-  console.log(typeof citasIninciales);
   if (!citasIninciales) {
     citasIninciales = [];
-    console.log(typeof citasIninciales);
   }
   const [citas, guardarCitas] = useState(citasIninciales);
 
   useEffect(() => {
-    console.log("useEffect");
-    console.log(citasIninciales);
     if (citasIninciales) {
       localStorage.setItem("citas", JSON.stringify(citas));
-      console.log("con citas");
-      console.log(citasIninciales);
     } else {
       localStorage.setItem("citas", JSON.stringify([citas]));
     }
